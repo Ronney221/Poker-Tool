@@ -1,0 +1,484 @@
+/* Base styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    color: #333;
+  }
+  
+
+  /* Container */
+  .container {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+  }
+  
+  /* Header */
+  header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  header h1 {
+    font-size: 2.5em;
+    margin-bottom: 0.3em;
+    color: inherit;
+  }
+  
+  header p {
+    font-size: 1.2em;
+    color: inherit;
+  }
+  
+
+  
+  /* Tracker Card */
+  .tracker-card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+  }
+  
+  
+  /* Form Styles */
+  .tracker-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .form-group {
+    flex: 1;
+    min-width: 150px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-group label {
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  .form-group input {
+    padding: 6px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .tracker-form button {
+    padding: 8px 16px;
+    border: none;
+    background-color: #007BFF;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .tracker-form button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Graph Styles */
+  .graph-container {
+    text-align: center;
+    margin: 20px 0;
+  }
+  
+  .graph-svg {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  /* Total Earnings Card with pop-up animation */
+  .total-earnings-card {
+    background-color: #e0e0e0;
+    border: 1px solid #ccc;
+    padding: 16px;
+    border-radius: 8px;
+    width: 250px;
+    margin: 30px auto;
+    text-align: center;
+    animation: popUp 0.5s ease-out;
+  }
+  
+  @keyframes popUp {
+    from {
+      transform: scale(0.8);
+      opacity: 0;
+    }
+    to {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  
+  /* Analytics Summary */
+  .analytics-summary {
+    background-color: #fafafa;
+    border: 1px solid #ccc;
+    padding: 12px;
+    border-radius: 6px;
+    margin: 20px 0;
+  }
+  
+  .analytics-summary h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+  
+  .analytics-summary ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .analytics-summary li {
+    margin-bottom: 5px;
+  }
+  
+  /* Export CSV Button */
+  .export-csv {
+    text-align: center;
+    margin: 20px 0;
+  }
+  
+  .export-csv button {
+    padding: 8px 16px;
+    background-color: #28a745;
+    border: none;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .export-csv button:hover {
+    background-color: #218838;
+  }
+  
+  /* History Table Styles */
+  .history-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  .history-table th,
+  .history-table td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: center;
+  }
+  
+  .history-table th {
+    background-color: #007BFF;
+    color: #fff;
+  }
+  
+  .history-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  .history-table tr:hover {
+    background-color: #f1f1f1;
+  }
+  
+  /* Profit Colors */
+  .profit-positive {
+    color: green;
+  }
+  
+  .profit-negative {
+    color: red;
+  }
+  
+  /* Footer */
+  footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.9em;
+    color: #777;
+  }
+  
+  /* Navigation Tabs */
+  .nav-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .tab-button {
+    padding: 8px 16px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .tab-button:hover {
+    background-color: #0056b3;
+  }
+  
+  .tab-button.active {
+    background-color: #0056b3;
+  }
+  
+  /* Buy-Ins, Cash-Out, and Summary Styles */
+  .buy-ins,
+  .cash-out,
+  .player-summary {
+    margin-top: 10px;
+  }
+  
+  .buy-ins h3 {
+    margin-bottom: 5px;
+  }
+  
+  .no-buyins {
+    font-style: italic;
+    color: #666;
+  }
+  
+  /* Add Buy-In Form */
+  .add-buyin-form {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  
+  .add-buyin-form input {
+    padding: 6px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 120px;
+  }
+  
+  .add-buyin-form button {
+    padding: 6px 12px;
+    background-color: #28a745;
+    border: none;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .add-buyin-form button:hover {
+    background-color: #218838;
+  }
+  
+  /* Overall Session Summary Card */
+  .overall-summary {
+    background-color: #e0e0e0;
+    border: 1px solid #ccc;
+    padding: 16px;
+    border-radius: 8px;
+    text-align: center;
+    margin-top: 30px;
+    width: 100%;
+  }
+  
+  /* Navigation Tabs */
+  .nav-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .tab-button {
+    padding: 8px 16px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .tab-button:hover {
+    background-color: #0056b3;
+  }
+  
+  .tab-button.active {
+    background-color: #0056b3;
+  }
+  
+  /* Footer */
+  footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.9em;
+    color: #777;
+  }
+  
+  
+  /* Add Player Form Styling */
+  .add-player-form {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    background-color: #e9f5ff; /* light blue background for a friendly feel */
+    padding: 12px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  
+  .add-player-form input {
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    flex: 1;
+    font-size: 1em;
+  }
+  
+  .add-player-form button {
+    padding: 8px 16px;
+    background-color: #007BFF;
+    border: none;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+  }
+  
+  .add-player-form button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Player Card Styling */
+  .player-card {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    padding: 16px;
+    margin-bottom: 20px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .player-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  }
+  
+  /* Player Header */
+  .player-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+  }
+  
+  /* Default Avatar (Emoji) */
+  .default-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #007BFF;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+  }
+  
+  /* Buy-Ins, Cash-Out, and Player Summary */
+  .buy-ins,
+  .cash-out,
+  .player-summary {
+    margin-top: 10px;
+  }
+  
+  .buy-ins h3 {
+    margin-bottom: 6px;
+  }
+  
+  .player-summary p {
+    margin: 4px 0;
+    font-weight: 500;
+  }
+  
+  /* Overall Session Summary Card */
+  .overall-summary {
+    background-color: #e0e0e0;
+    border: 1px solid #ccc;
+    padding: 16px;
+    border-radius: 8px;
+    text-align: center;
+    margin-top: 30px;
+    width: 100%;
+  }
+  
+  /* Settlement Section */
+  .settlement-section {
+    text-align: center;
+    margin-top: 30px;
+  }
+  
+  .settlement-btn {
+    padding: 10px 20px;
+    background-color: #ff9800;
+    border: none;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .settlement-btn:hover {
+    background-color: #e68900;
+  }
+  
+  .settlement-card {
+    background-color: #fff3e0;
+    border: 1px solid #ffcc80;
+    padding: 16px;
+    border-radius: 8px;
+    margin-top: 20px;
+    text-align: left;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  /* Navigation Tabs */
+  .nav-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .tab-button {
+    padding: 8px 16px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .tab-button:hover {
+    background-color: #0056b3;
+  }
+  
+  .tab-button.active {
+    background-color: #0056b3;
+  }
+  
+  /* Footer */
+  footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.9em;
+    color: #777;
+  }
